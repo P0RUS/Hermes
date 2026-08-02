@@ -12,18 +12,26 @@ In Greek mythology, Hermes is the messenger of the gods.
 
 This project follows a similar idea: taking raw information, finding meaningful patterns within it, and communicating those insights in a useful way.
 
-## Current Progress
+## 🚀 Project Progress
 
 - [x] Project environment setup
 - [x] Dataset acquisition
 - [x] Initial data inspection
 - [x] Missing-value and duplicate checks
-- [x] Exploratory data analysis
+- [x] Exploratory data analysis (EDA)
 - [x] Feature correlation analysis
-- [ ] Baseline machine-learning model
-- [ ] Model comparison and evaluation
+- [x] Logistic Regression baseline
+- [x] Decision Tree benchmark
+- [x] Random Forest benchmark
+- [x] K-Nearest Neighbors (KNN) benchmark
+- [ ] Cross-validation
+- [ ] Feature importance analysis
+- [ ] Hyperparameter tuning
+- [ ] Model comparison report
 - [ ] Prediction system
-- [ ] Web interface
+- [ ] Flask web application
+- [ ] Interactive dashboard
+- [ ] Model deployment
 
 ## Tech Stack
 
@@ -58,27 +66,6 @@ Hermes does not select models based solely on classification accuracy. Since the
 - Predictions within ±1 grade category
 
 This evaluation strategy provides a more meaningful assessment of prediction quality and allows fairer comparison between machine learning models.
-
-## 🚀 Project Progress
-
-- [x] Project environment setup
-- [x] Dataset acquisition
-- [x] Initial data inspection
-- [x] Missing-value and duplicate checks
-- [x] Exploratory data analysis (EDA)
-- [x] Feature correlation analysis
-- [x] Logistic Regression baseline
-- [x] Decision Tree benchmark
-- [x] Random Forest benchmark
-- [x] K-Nearest Neighbors (KNN) benchmark
-- [ ] Cross-validation
-- [ ] Feature importance analysis
-- [ ] Hyperparameter tuning
-- [ ] Model comparison report
-- [ ] Prediction system
-- [ ] Flask web application
-- [ ] Interactive dashboard
-- [ ] Model deployment
 
 ## 🗺️ Roadmap
 
