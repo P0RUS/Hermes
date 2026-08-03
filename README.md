@@ -1,5 +1,5 @@
 # Hermes 🪽
-
+inspired by The ODYSSEY
 > 🚧 **Hermes v0.1 — Research Phase**
 
 Hermes is a machine-learning project exploring the factors associated with student academic performance.
