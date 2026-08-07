@@ -15,44 +15,64 @@
 
 </head>
 
-<body>
-
 <header>
 
     <h1>🪽 Hermes</h1>
 
-    <p>Prediction Complete</p>
+    <p class="status-badge">
+        ✓ Prediction Complete
+    </p>
 
 </header>
 
-<hr>
-
 <main>
 
-    <h2>Hermes' Insight</h2>
+    <div class="result-card">
 
-    <h3>Predicted Final Grade</h3>
+        <h2>Hermes' Insight</h2>
 
-    <h1>{{ prediction }}</h1>
+        <p class="prediction-label">
+            Predicted Final Grade
+        </p>
 
-    <p>
+        <div class="prediction-grade">
+            Grade {{ prediction }}
+        </div>
 
-        Based on the submitted academic information,
-        Hermes predicts that the student is most likely
-        to achieve Grade {{ prediction }}.
+        <p class="prediction-text">
 
-    </p>
+            Based on the submitted academic profile,
+            Hermes predicts that the student is most
+            likely to achieve <strong>Grade {{ prediction }}</strong>.
+
+        </p>
+
+        <br>
+
+        <a class="back-button" href="/">
+
+            ← Make Another Prediction
+
+        </a>
+
+    </div>
 
 </main>
 
-<hr>
-
 <footer>
 
-    <a href="/">Consult Hermes Again</a>
+    <p>
+
+        Hermes v1.0 — The Herald
+
+    </p>
+
+    <p>
+
+        Part of the Pantheon Portfolio
+
+    </p>
 
 </footer>
-
-</body>
 
 </html>

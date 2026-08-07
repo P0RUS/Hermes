@@ -10,3 +10,15 @@ Every major engineering decision is expected to answer four questions:
 - What hypothesis do we have?
 - What evidence supports the result?
 - What did we learn?
+
+# Pantheon Principle I
+
+Every Pantheon application should feel like an experience before it feels like software.
+
+# Pantheon Principle II
+
+Every project tells a story through interaction.
+
+# Pantheon's First Law
+
+"The web does a basic job, but the intention and experience, efforts and thinking put in makes the recruiter in awe."
