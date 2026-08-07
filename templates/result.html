@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Hermes | Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🪽 Hermes</h1>
+
+    <p>Prediction Complete</p>
+
+</header>
+
+<hr>
+
+<main>
+
+    <h2>Hermes' Insight</h2>
+
+    <h3>Predicted Final Grade</h3>
+
+    <h1>{{ prediction }}</h1>
+
+    <p>
+
+        Based on the submitted academic information,
+        Hermes predicts that the student is most likely
+        to achieve Grade {{ prediction }}.
+
+    </p>
+
+</main>
+
+<hr>
+
+<footer>
+
+    <a href="/">Consult Hermes Again</a>
+
+</footer>
+
+</body>
+
+</html>

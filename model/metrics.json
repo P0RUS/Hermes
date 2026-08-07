@@ -1,0 +1,19 @@
+{
+    "evaluation": {
+        "cross_validation": {
+            "folds": 5,
+            "mean_accuracy": 0.3310,
+            "standard_deviation": 0.0985
+        },
+        "test_metrics": {
+            "accuracy": 0.3103,
+            "mean_absolute_error": 1.2759,
+            "within_one_grade": 0.6552
+        }
+    },
+    "best_model": {
+        "algorithm": "Random Forest Classifier",
+        "version": "v0.5",
+        "codename": "The Engine"
+    }
+}

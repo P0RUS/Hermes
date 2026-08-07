@@ -1,24 +1,34 @@
 import numpy as np
 
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import mean_absolute_error
 
-def evaluate_model(model, X_train, X_test, y_train, y_test):
 
-    # Train
+def evaluate_model(
+    model,
+    X_train,
+    X_test,
+    y_train,
+    y_test,
+    model_name=None
+):
+
     model.fit(X_train, y_train)
 
-    # Predict
     predictions = model.predict(X_test)
 
-    # Metrics
     accuracy = accuracy_score(y_test, predictions)
 
-    mae = np.mean(np.abs(y_test - predictions))
+    mae = mean_absolute_error(y_test, predictions)
 
-    within_one = np.mean(np.abs(y_test - predictions) <= 1)
+    grade_difference = np.abs(y_test - predictions)
+
+    within_one = np.mean(grade_difference <= 1)
+
+    name = model_name or model.__class__.__name__
 
     return {
-        "Model": model.__class__.__name__,
+        "Model": name,
         "Accuracy": accuracy,
         "MAE": mae,
         "Within ±1": within_one

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermes | The Gateway</title>
+</head>
+<body>
+
+<header>
+
+    <h1>🪽 Hermes</h1>
+
+    <h2>The Herald</h2>
+
+    <p>
+
+        Predict student academic performance
+        using machine learning.
+
+    </p>
+
+</header>
+
+<main>
+
+<h2>Consult Hermes</h2>
+<p>Enter the student's academic information below to receive a predicted course grade.</p>
+
+<form action="/predict" method="POST">
+
+<section>
+
+    <h3>👤 Student Profile</h3>
+
+    <label for="student_age">
+        Student Age
+    </label><br>
+
+    <select
+        id="student_age"
+        name="student_age"
+        required
+    >
+        <option value="">Select Age Group</option>
+        <option value="1">18–21</option>
+        <option value="2">22–25</option>
+        <option value="3">Above 26</option>
+    </select>
+
+    <br><br>
+
+    <label for="sex">
+        Sex
+    </label><br>
+
+    <select
+        id="sex"
+        name="sex"
+        required
+    >
+        <option value="">Select Sex</option>
+        <option value="1">Female</option>
+        <option value="2">Male</option>
+    </select>
+
+    <br><br>
+
+    <label for="high_school_type">
+        High School Type
+    </label><br>
+
+    <select
+        id="high_school_type"
+        name="high_school_type"
+        required
+    >
+        <option value="">Select High School Type</option>
+        <option value="1">Private</option>
+        <option value="2">State</option>
+        <option value="3">Other</option>
+    </select>
+
+    <br><br>
+
+    <label for="scholarship_type">
+        Scholarship
+    </label><br>
+
+    <select
+        id="scholarship_type"
+        name="scholarship_type"
+        required
+    >
+        <option value="">Select Scholarship</option>
+        <option value="1">None</option>
+        <option value="2">25%</option>
+        <option value="3">50%</option>
+        <option value="4">75%</option>
+        <option value="5">Full Scholarship</option>
+    </select>
+
+</section>
+
+<section>
+
+    <h3>🏠 Personal Background</h3>
+
+    <label for="additional_work">
+        Do You Have a Part-Time Job?
+    </label><br>
+
+    <select
+        id="additional_work"
+        name="additional_work"
+        required
+    >
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+    </select>
+
+    <br><br>
+
+    <label for="sports_activity">
+        Participate in Sports or Arts?
+    </label><br>
+
+    <select
+        id="sports_activity"
+        name="sports_activity"
+        required
+    >
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+    </select>
+
+    <br><br>
+
+    <label for="partner">
+        Do You Have a Partner?
+    </label><br>
+
+    <select
+        id="partner"
+        name="partner"
+        required
+    >
+        <option value="">Select</option>
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+    </select>
+
+    <br><br>
+
+    <label for="salary">
+        Monthly Income
+    </label><br>
+
+    <select
+        id="salary"
+        name="salary"
+        required
+    >
+        <option value="">Select Income Range</option>
+        <option value="1">$135–200</option>
+        <option value="2">$201–270</option>
+        <option value="3">$271–340</option>
+        <option value="4">$341–410</option>
+        <option value="5">Above $410</option>
+    </select>
+
+    <br><br>
+
+    <label for="transportation">
+        Transportation to University
+    </label><br>
+
+    <select
+        id="transportation"
+        name="transportation"
+        required
+    >
+        <option value="">Select Transportation</option>
+        <option value="1">Bus</option>
+        <option value="2">Private Car / Taxi</option>
+        <option value="3">Bicycle</option>
+        <option value="4">Other</option>
+    </select>
+
+    <br><br>
+
+    <label for="accommodation">
+        Accommodation
+    </label><br>
+
+    <select
+        id="accommodation"
+        name="accommodation"
+        required
+    >
+        <option value="">Select Accommodation</option>
+        <option value="1">Rental</option>
+        <option value="2">Dormitory</option>
+        <option value="3">With Family</option>
+        <option value="4">Other</option>
+    </select>
+
+</section>
+
+<section>
+
+    <h3>👨‍👩‍👧 Family Information</h3>
+
+    <label for="mother_education">
+        Mother's Education
+    </label><br>
+
+    <select
+        id="mother_education"
+        name="mother_education"
+        required
+    >
+        <option value="">Select Education</option>
+        <option value="1">Primary School</option>
+        <option value="2">Secondary School</option>
+        <option value="3">High School</option>
+        <option value="4">University</option>
+        <option value="5">Master's Degree</option>
+        <option value="6">Ph.D.</option>
+    </select>
+
+    <br><br>
+
+    <label for="father_education">
+        Father's Education
+    </label><br>
+
+    <select
+        id="father_education"
+        name="father_education"
+        required
+    >
+        <option value="">Select Education</option>
+        <option value="1">Primary School</option>
+        <option value="2">Secondary School</option>
+        <option value="3">High School</option>
+        <option value="4">University</option>
+        <option value="5">Master's Degree</option>
+        <option value="6">Ph.D.</option>
+    </select>
+
+    <br><br>
+
+    <label for="siblings">
+        Number of Siblings
+    </label><br>
+
+    <select
+        id="siblings"
+        name="siblings"
+        required
+    >
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 or More</option>
+    </select>
+
+    <br><br>
+
+    <label for="parental_status">
+        Parental Status
+    </label><br>
+
+    <select
+        id="parental_status"
+        name="parental_status"
+        required
+    >
+        <option value="">Select</option>
+        <option value="1">Married</option>
+        <option value="2">Divorced</option>
+        <option value="3">One or Both Deceased</option>
+    </select>
+
+    <br><br>
+
+    <label for="mother_occupation">
+        Mother's Occupation
+    </label><br>
+
+    <select
+        id="mother_occupation"
+        name="mother_occupation"
+        required
+    >
+        <option value="">Select Occupation</option>
+        <option value="1">Retired</option>
+        <option value="2">Housewife</option>
+        <option value="3">Government Officer</option>
+        <option value="4">Private Sector</option>
+        <option value="5">Self-Employed</option>
+        <option value="6">Other</option>
+    </select>
+
+    <br><br>
+
+    <label for="father_occupation">
+        Father's Occupation
+    </label><br>
+
+    <select
+        id="father_occupation"
+        name="father_occupation"
+        required
+    >
+        <option value="">Select Occupation</option>
+        <option value="1">Retired</option>
+        <option value="2">Government Officer</option>
+        <option value="3">Private Sector</option>
+        <option value="4">Self-Employed</option>
+        <option value="5">Other</option>
+    </select>
+
+</section>
+
+<section>
+
+    <h3>📚 Study Habits</h3>
+
+    <label for="weekly_study_hours">Weekly Study Hours</label><br>
+
+    <select id="weekly_study_hours"
+            name="weekly_study_hours"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">None</option>
+        <option value="2">Less than 5 Hours</option>
+        <option value="3">6–10 Hours</option>
+        <option value="4">11–20 Hours</option>
+        <option value="5">More than 20 Hours</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="reading_frequency">
+        Reading (Non-Scientific)
+    </label><br>
+
+    <select id="reading_frequency"
+            name="reading_frequency"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Never</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="scientific_reading">
+        Reading (Scientific)
+    </label><br>
+
+    <select id="scientific_reading"
+            name="scientific_reading"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Never</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="seminar_attendance">
+        Seminar Attendance
+    </label><br>
+
+    <select id="seminar_attendance"
+            name="seminar_attendance"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Never</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Often</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="project_impact">
+        Project Impact on Success
+    </label><br>
+
+    <select id="project_impact"
+            name="project_impact"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Positive</option>
+        <option value="2">Negative</option>
+        <option value="3">Neutral</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="class_attendance">
+        Class Attendance
+    </label><br>
+
+    <select id="class_attendance"
+            name="class_attendance"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Always</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Never</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="midterm_preparation_1">
+        Midterm Preparation Method
+    </label><br>
+
+    <select id="midterm_preparation_1"
+            name="midterm_preparation_1"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Prepared Alone</option>
+        <option value="2">Prepared with Friends</option>
+        <option value="3">Did Not Prepare</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="midterm_preparation_2">
+        Preparation Timing
+    </label><br>
+
+    <select id="midterm_preparation_2"
+            name="midterm_preparation_2"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Closest to Exam</option>
+        <option value="2">Regularly Throughout Semester</option>
+        <option value="3">Never</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="taking_notes">
+        Taking Notes
+    </label><br>
+
+    <select id="taking_notes"
+            name="taking_notes"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Never</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Always</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="listening">
+        Listening During Class
+    </label><br>
+
+    <select id="listening"
+            name="listening"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Never</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Always</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="discussion">
+        Class Discussion Participation
+    </label><br>
+
+    <select id="discussion"
+            name="discussion"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Never</option>
+        <option value="2">Sometimes</option>
+        <option value="3">Always</option>
+
+    </select>
+
+    <br><br>
+
+    <label for="flip_classroom">
+        Opinion on Flip Classroom
+    </label><br>
+
+    <select id="flip_classroom"
+            name="flip_classroom"
+            required>
+
+        <option value="">Select</option>
+        <option value="1">Not Useful</option>
+        <option value="2">Useful</option>
+        <option value="3">Very Useful</option>
+
+    </select>
+
+</section>
+
+<section>
+
+    <h3>🎓 Academic History</h3>
+
+    <label for="previous_gpa">
+        Previous GPA (Last Semester)
+    </label><br>
+
+    <input
+        type="number"
+        id="previous_gpa"
+        name="previous_gpa"
+        min="0.00"
+        max="4.00"
+        step="0.01"
+        placeholder="e.g. 3.45"
+        required
+    >
+
+    <br><br>
+
+    <label for="expected_gpa">
+        Expected Graduation GPA
+    </label><br>
+
+    <input
+        type="number"
+        id="expected_gpa"
+        name="expected_gpa"
+        min="0.00"
+        max="4.00"
+        step="0.01"
+        placeholder="e.g. 3.70"
+        required
+    >
+
+    <br><br>
+
+    <label for="course_id">
+        Course ID
+    </label><br>
+
+    <select
+        id="course_id"
+        name="course_id"
+        required
+    >
+        <option value="">Select Course</option>
+        <option value="1">Course 1</option>
+        <option value="2">Course 2</option>
+        <option value="3">Course 3</option>
+        <option value="4">Course 4</option>
+        <option value="5">Course 5</option>
+        <option value="6">Course 6</option>
+        <option value="7">Course 7</option>
+        <option value="8">Course 8</option>
+        <option value="9">Course 9</option>
+    </select>
+
+</section>
+
+<button type="submit">Consult Hermes</button>
+
+</form>
+</main>
+
+<hr>
+
+<footer>
+<p>Hermes v1.0 — The Herald</p>
+<p>Part of the Pantheon Portfolio</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hermes | Error</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🪽 Hermes</h1>
+
+    <p>Something went wrong.</p>
+
+</header>
+
+<hr>
+
+<main>
+
+    <h2>Oops!</h2>
+
+    <p>
+        Hermes couldn't complete your request.
+    </p>
+
+    <p>
+        <strong>Error:</strong> {{ error }}
+    </p>
+
+    <br>
+
+    <a href="/">← Return to Hermes</a>
+
+</main>
+
+</body>
+
+</html>

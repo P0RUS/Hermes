@@ -1,0 +1,17 @@
+{
+    "project": "Hermes",
+    "version": "v0.5",
+    "codename": "The Engine",
+    "model": "Random Forest Classifier",
+    "algorithm": "RandomForestClassifier",
+    "accuracy_cv": 0.3310,
+    "best_parameters": {
+        "n_estimators": 50,
+        "max_depth": 10,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1
+    },
+    "status": "Active Development",
+    "created_by": "RamRam",
+    "notes": "Optimized using GridSearchCV with 5-fold cross-validation."
+}

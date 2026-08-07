@@ -1,93 +1,165 @@
-# Hermes 🪽
+# 🪽 Hermes
 
-> 🚧 **Hermes v0.1 — Research Phase**
+> **Hermes v1.0 – The Herald**
 
-Hermes is a machine-learning project exploring the factors associated with student academic performance.
+**Knowledge enters. Insight leaves.**
 
-The project uses student data to investigate relationships between academic habits and outcomes, with the long-term goal of building an interactive system that can provide data-driven performance insights.
+Hermes is an end-to-end machine learning web application that predicts student academic performance using supervised learning techniques. Built with Python, scikit-learn, and Flask, the project demonstrates the complete machine learning workflow—from data exploration and model evaluation to deployment through an interactive web interface.
 
-## Why Hermes?
+Hermes was developed as an evidence-driven machine learning project. Every major improvement is supported by experiments, cross-validation, and documented engineering decisions rather than relying on a single evaluation metric.
+
+---
+
+# ✨ Features
+
+- 📊 Exploratory Data Analysis (EDA)
+- 🤖 Multiple machine learning models
+  - Logistic Regression
+  - Decision Tree
+  - Random Forest
+  - K-Nearest Neighbors
+- 📈 Cross-validation
+- 🌲 Feature importance analysis
+- ⚙️ Hyperparameter tuning
+- 💾 Model persistence with Joblib
+- 🌐 Flask web application
+- 🖥️ Interactive prediction interface
+- 📁 Modular Python package architecture
+- 📜 Logging and error handling
+
+---
+
+# 🏛️ Why Hermes?
 
 In Greek mythology, Hermes is the messenger of the gods.
 
-This project follows a similar idea: taking raw information, finding meaningful patterns within it, and communicating those insights in a useful way.
+This project follows the same philosophy: transforming raw educational data into meaningful insights and presenting those insights through a clean and accessible interface.
 
-## 🚀 Project Progress
+Rather than simply predicting grades, Hermes aims to demonstrate the complete lifecycle of a machine learning application.
 
-- [x] Project environment setup
-- [x] Dataset acquisition
-- [x] Initial data inspection
-- [x] Missing-value and duplicate checks
-- [x] Exploratory data analysis (EDA)
-- [x] Feature correlation analysis
-- [x] Logistic Regression baseline
-- [x] Decision Tree benchmark
-- [x] Random Forest benchmark
-- [x] K-Nearest Neighbors (KNN) benchmark
-- [ ] Cross-validation
-- [ ] Feature importance analysis
-- [ ] Hyperparameter tuning
-- [ ] Model comparison report
-- [ ] Prediction system
-- [ ] Flask web application
-- [ ] Interactive dashboard
-- [ ] Model deployment
+---
 
-## Tech Stack
+# 📊 Evaluation Strategy
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- scikit-learn
-- Jupyter Notebook
-
-## Project Structure
-
-    Hermes/
-    ├── data/
-    ├── model/
-    ├── notebooks/
-    │   └── analysis.ipynb
-    ├── app.py
-    ├── requirements.txt
-    └── README.md
-
-## Status
-
-🚧 Currently under development.
-
-## 📊 Model Evaluation
-
-Hermes does not select models based solely on classification accuracy. Since the target variable represents ordered grade categories, each model is evaluated using multiple complementary metrics:
+Hermes evaluates models using multiple complementary metrics:
 
 - Accuracy
 - Mean Absolute Error (MAE)
-- Predictions within ±1 grade category
+- Predictions Within ±1 Grade
+- Cross-Validation
 
-This evaluation strategy provides a more meaningful assessment of prediction quality and allows fairer comparison between machine learning models.
+Using several evaluation metrics provides a more reliable assessment than relying on classification accuracy alone, especially for ordered grade categories.
 
-## 🗺️ Roadmap
+---
 
-### Hermes v0.1
-- Initial data exploration
-- Baseline machine learning models
-- Model benchmarking
-- Evaluation metrics
+# 🛠️ Tech Stack
 
-### Hermes v0.2
-- Cross-validation
-- Feature importance analysis
-- Hyperparameter tuning
-- Improved documentation
+- Python
+- Flask
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Joblib
+- Jupyter Notebook
 
-### Hermes v0.3
-- Prediction pipeline
-- Flask web application
-- Interactive dashboard
+---
 
-### Hermes v1.0
-- Stable web application
-- Live deployment
-- Polished documentation
-- Portfolio-ready release
+# 📂 Project Structure
+
+```text
+Hermes/
+│
+├── app.py
+├── config.py
+├── requirements.txt
+├── README.md
+├── CHANGELOG.md
+├── ROADMAP.md
+│
+├── data/
+├── docs/
+├── experiments/
+├── hermes/
+│   ├── evaluation.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── prediction.py
+│   ├── schema.py
+│   ├── utils.py
+│   └── visualization.py
+│
+├── model/
+├── notebooks/
+├── static/
+└── templates/
+```
+## 🏗️ Architecture
+
+The Hermes architecture is documented in:
+
+```text
+docs/architecture.md
+---
+
+# 🚀 Running Hermes
+
+Clone the repository
+
+```bash
+git clone <repository-url>
+cd Hermes
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application
+
+```bash
+python app.py
+```
+
+Open your browser:
+
+```text
+http://127.0.0.1:5000
+```
+
+---
+
+# 📸 Application
+
+> Screenshots of the home page, prediction page, and result page will be added here.
+
+---
+
+# 📈 Current Status
+
+✅ Machine learning pipeline complete
+
+✅ Model evaluation complete
+
+✅ Flask application complete
+
+✅ Interactive prediction system complete
+
+🚧 Portfolio polish and documentation improvements ongoing
+
+---
+
+# 🎯 Future Improvements
+
+- Better input validation
+- Improved UI/UX
+- Additional visualizations
+- Deployment to the cloud
+
+---
+
+# 📜 License
+
+This project is released under the MIT License.
