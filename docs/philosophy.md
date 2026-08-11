@@ -22,3 +22,7 @@ Every project tells a story through interaction.
 # Pantheon's First Law
 
 "The web does a basic job, but the intention and experience, efforts and thinking put in makes the recruiter in awe."
+
+# Pantheon Principle III
+
+When we're designing creative projects, think in emotional moments and experience journeys before pages, components, or code.
